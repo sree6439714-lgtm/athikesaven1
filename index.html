@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athikesavan | Federal Bank Appraiser | Karungal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary-blue: #003087;
+            --accent-yellow: #FFAA00;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #002266 100%);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .federal-logo {
+            background: #003087;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-size: 24px;
+            font-weight: 700;
+            border-bottom: 5px solid var(--accent-yellow);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,48,135,0.9), rgba(0,34,102,0.9)), url('https://via.placeholder.com/1200x600/003087/ffffff?text=Federal+Bank') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        
+        h1 { font-family: 'Poppins', sans-serif; font-size: 2.4rem; margin-bottom: 8px; }
+        .subtitle { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.95; }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            margin: 10px auto;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-call { background: var(--accent-yellow); color: #003087; }
+        .btn-whatsapp { background: #25D366; color: white; }
+        
+        .section { padding: 60px 0; }
+        .about { background: white; }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .profile-photo {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+        }
+        
+        .location-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+        
+        .services { background: #f8f9fa; }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .service-icon { font-size: 3rem; margin-bottom: 15px; }
+        
+        .contact-section { background: var(--primary-blue); color: white; }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.12);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .info-item i { font-size: 1.6rem; margin-right: 18px; min-width: 28px; }
+        
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+        }
+        
+        .nav {
+            background: rgba(255,255,255,0.98);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 12px 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 18px;
+        }
+        
+        @media (min-width: 640px) {
+            .about-grid { grid-template-columns: 1fr 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .btn { display: inline-block; width: auto; margin: 8px; }
+        }
+        
+        @media (min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 480px) {
+            .hero { padding: 40px 20px 30px; }
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
+            .section { padding: 40px 0; }
+            .service-card { padding: 20px 15px; }
+            .contact-info { padding: 20px; }
+            .nav a { padding: 6px 10px; font-size: 0.9rem; }
+            .btn { padding: 14px; font-size: 1rem; }
+            .about-text h2 { font-size: 1.8rem; }
+            .service-icon { font-size: 2.5rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="federal-logo">FEDERAL BANK</div>
+            <p style="margin-top:6px; opacity:0.9;">Approved Appraiser</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Athikesavan</h1>
+            <p class="subtitle">Federal Bank Approved Appraiser</p>
+            <p style="max-width:600px; margin:0 auto 30px;">Professional Property Valuation in Karungal, Tamil Nadu</p>
+            
+            <a href="tel:9994902769" class="btn btn-call"><i class="fas fa-phone"></i> Call 99949 02769</a>
+            <a href="https://wa.me/919994902769" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Fixed direct photo link -->
+                <div class="profile-photo">
+                    <img src="https://i.postimg.cc/5bTp7wPM/IMG-20260405-081808.jpg" 
+                         alt="Athikesavan - Federal Bank Approved Appraiser">
+                </div>
+                
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am <strong>Athikesavan</strong>, an approved appraiser for Federal Bank serving Karungal and nearby areas.</p>
+                    <p>I provide accurate property valuation for home loans, mortgage loans, and other banking needs.</p>
+                    
+                    <div class="location-box">
+                        <strong>📍 Location:</strong><br>
+                        Ground Floor, No. V179, Main Road,<br>
+                        Near Paloor Bridge, Paloor,<br>
+                        Karungal, Tamil Nadu - 629157
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:40px; color:var(--primary-blue);">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Home Loan Valuation</h3>
+                    <p>Accurate valuation for home loans as per bank guidelines.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏦</div>
+                    <h3>Mortgage Appraisal</h3>
+                    <p>Professional assessment for mortgage loans.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Site Visits & Reports</h3>
+                    <p>Physical inspection with detailed reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:40px; color:white;">Contact Me</h2>
+            <div class="contact-info">
+                <h3 style="margin-bottom:20px;"><i class="fas fa-user"></i> Athikesavan</h3>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div><strong>Phone:</strong> <a href="tel:9994902769" style="color:white;">99949 02769</a></div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Ground Floor, No. V179, Main Road, Near Paloor Bridge, Paloor, Karungal, Tamil Nadu 629157</div>
+                </div>
+            </div>
+            
+            <a href="tel:9994902769" class="btn btn-call">Call Now</a>
+            <a href="https://wa.me/919994902769" target="_blank" class="btn btn-whatsapp">Message on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Athikesavan</strong> – Federal Bank Approved Appraiser</p>
+            <p>Karungal, Tamil Nadu • 99949 02769</p>
+            <p style="margin-top:20px; opacity:0.7;">© 2026 Professional Services</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
